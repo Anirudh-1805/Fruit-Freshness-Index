@@ -65,3 +65,8 @@ test_image = np.expand_dims(test_image, axis = 0)
 test_image = test_image / 255.0
 result = cnn.predict(test_image)
 ```
+The **Freshness Index** is calculated based on the output probabilities for fresh and rotten classes. Depending on the predicted class, the program will indicate whether the fruit is fresh or rotten and display the calculated freshness index.
+
+## Conclusion
+
+This project demonstrates the capabilities of CNNs in image classification tasks, particularly in determining the freshness of fruits based on visual features. The calculated **Freshness Index** provides a quantifiable measure of freshness, enhancing the understanding of the model's predictions.
