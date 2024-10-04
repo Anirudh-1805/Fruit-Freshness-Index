@@ -43,3 +43,25 @@ To train the model, run:
 ```bash
 cnn.fit(x = training_set, validation_data = test_set, epochs = 50)
 ```
+## The Model is Compiled with:
+
+- **Optimizer**: Adam
+- **Loss Function**: Categorical Crossentropy
+- **Metrics**: Accuracy
+
+## Model Evaluation
+
+- After training, the model is evaluated on the test set.
+- Accuracy and loss values are printed after each epoch.
+
+## Making Predictions
+
+You can make a single prediction with the trained model using a test image:
+
+```python
+test_image = image.load_img('path_to_image.png', target_size = (64, 64))
+test_image = image.img_to_array(test_image)
+test_image = np.expand_dims(test_image, axis = 0)
+test_image = test_image / 255.0
+result = cnn.predict(test_image)
+```
